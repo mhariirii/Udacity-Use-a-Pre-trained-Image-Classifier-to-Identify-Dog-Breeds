@@ -1,0 +1,88 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 5 key-value pairs.
+Below are 5 of them:
+ 1 key:                     Dog_03.jpg  label:                        dog
+ 2 key:                  Rabbit_01.jpg  label:                     rabbit
+ 3 key:                Soccer_ball.jpg  label:                     soccer
+ 4 key:                     Dog_02.jpg  label:                        dog
+ 5 key:                     Dog_01.jpg  label:                        dog
+{'Dog_03.jpg': ['dog', 'basenji', 0], 'Rabbit_01.jpg': ['rabbit', 'wood rabbit, cottontail, cottontail rabbit, rabbit', 1], 'Soccer_ball.jpg': ['soccer', 'soccer ball', 1], 'Dog_02.jpg': ['dog', 'golden retriever', 0], 'Dog_01.jpg': ['dog', 'golden retriever', 0]}
+
+     MATCH:
+
+                 Rabbit_01.jpg: 
+Real:                     rabbit   Classifier: wood rabbit, cottontail, cottontail rabbit, rabbit
+
+               Soccer_ball.jpg: 
+Real:                     soccer   Classifier:                    soccer ball
+
+ NOT A MATCH:
+
+                    Dog_03.jpg: 
+Real:                        dog   Classifier:                        basenji
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:               golden retriever
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               golden retriever
+
+# Total Images 5 # Matches: 2 # NOT Matches: 3
+
+     MATCH:
+
+                 Rabbit_01.jpg: 
+Real:                     rabbit   Classifier: wood rabbit, cottontail, cottontail rabbit, rabbit  
+PetLabelDog: 0  ClassLabelDog: 0
+
+               Soccer_ball.jpg: 
+Real:                     soccer   Classifier:                    soccer ball  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_03.jpg: 
+Real:                        dog   Classifier:                        basenji  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 5 # Matches: 2 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  5  N Dog Images:  3  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  5  N Dog Images:  3  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   5
+N Dog Images        :   3
+N Not-Dog Images    :   2
+ 
+pct_match: 40.0
+pct_correct_dogs: 100.0
+pct_correct_breed: 0.0
+pct_correct_notdogs: 0.0
+
+INCORRECT Dog/NOT Dog Assignments:
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:                        basenji
+Real:                        dog   Classifier:               golden retriever
+Real:                        dog   Classifier:               golden retriever
+
+** Total Elapsed Runtime: 0:1:15
